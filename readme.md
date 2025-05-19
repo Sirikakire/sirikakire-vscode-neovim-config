@@ -3,7 +3,7 @@ Please make sure you have **backup your config** before cloning this Neovim conf
 
 ## Installation:
 ```
-git clone https://github.com/Sirikakire/sirikakire-neovim-config ~/.config/nvim
+git clone https://github.com/Sirikakire/sirikakire-vscode-neovim-config ~/.config/nvim
 ```
 
 ## Remove .git file:

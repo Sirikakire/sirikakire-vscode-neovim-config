@@ -14,7 +14,6 @@ require("lazy").setup(
   {
     spec = {
       { import = "plugins" },
-      { import = "plugins.colorschemes" },
     },
     ui = {
       border = require("utils").border,

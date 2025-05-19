@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 local options = {
   "autoindent",
   "incsearch",
@@ -15,7 +17,7 @@ local options = {
   "history=0",
   "confirm",
   "noshowcmd",
-  "cmdheight=0",
+  "cmdheight=1",
   "backspace=start,eol,indent",
   "shiftround",
   "nobackup",
@@ -41,49 +43,8 @@ local options = {
   "nofoldenable",
   "fillchars+=eob:\\ ",
   "noundofile",
-  "mapleader=' '"
 }
-
-if(vim.b.win_separator) then
-  options = vim.b.thick_win_separator
-  and
-    vim.list_extend(options, {
-      "fillchars+=horiz:\\━",
-      "fillchars+=horizup:\\┻",
-      "fillchars+=horizdown:\\┳",
-      "fillchars+=vert:\\┃",
-      "fillchars+=vertleft:\\┫",
-      "fillchars+=vertright:\\┣",
-      "fillchars+=verthoriz:\\╋",
-    })
-  or
-    vim.list_extend(options, {
-    "fillchars+=horiz:\\─",
-    "fillchars+=horizup:\\┴",
-    "fillchars+=horizdown:\\┬",
-    "fillchars+=vert:\\│",
-    "fillchars+=vertleft:\\┤ ",
-    "fillchars+=vertright:\\├",
-    "fillchars+=verthoriz:\\┼",
-    })
-else
-  options = vim.list_extend(options, {
-    "fillchars+=horiz:\\ ",
-    "fillchars+=horizup:\\ ",
-    "fillchars+=horizdown:\\ ",
-    "fillchars+=vert:\\ ",
-    "fillchars+=vertleft:\\ ",
-    "fillchars+=vertright:\\ ",
-    "fillchars+=verthoriz:\\ ",
-  })
-end
-
-if (vim.g.neovide) then
-  options = vim.list_extend(options, {
-    "linespace=" .. vim.b.line_space
-  })
-end
-
+-- 
 for i, option in pairs(options) do
   vim.cmd("set "..option)
 end
